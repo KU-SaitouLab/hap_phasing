@@ -2,14 +2,15 @@
 # Step1, 1-4 : Mapping and reconstruct genome reference fasta with target SNP.
 # Step2, 1-9 : Mapping and haplotype phasing.
 # Step3, 1-2 : Haplotype phasing other NGS data using SNP.
-# Requirement : megalodon v2.5.0
-# Requirement : Clair3 v0.1.12
-# Requirement : whatshap v1.4
-# Requirement : bgzip, tabix
-# Requirement : bcftools v1.15.1
-# Requirement : samtools 1.9
-# Requirement : modbam2bed v0.5.3
-# Requirement : SNPsplit v0.3.2
+# Requirement : megalodon v2.5.0 https://github.com/nanoporetech/megalodon.git
+# Requirement : Clair3 v0.1.12 https://github.com/HKU-BAL/Clair3.git
+# Requirement : whatshap v1.4 https://github.com/whatshap/whatshap.git
+# Requirement : bgzip2 http://www.bzip.org/
+# Requirement : tabix https://github.com/samtools/htslib.git
+# Requirement : bcftools v1.15.1 https://github.com/samtools/bcftools.git
+# Requirement : samtools 1.9 https://github.com/samtools/bcftools.git
+# Requirement : modbam2bed v0.5.3 https://github.com/epi2me-labs/modbam2bed.git
+# Requirement : SNPsplit v0.3.2 https://github.com/FelixKrueger/SNPsplit.git
 
 # Steps 1-1,2,3,4 are to identify SNPs that are not in reference genome (GT:1/1 or 1/2) and replace those positions of reference genome with ALT(1) nucleotides.
 # These steps are to identify SNPs that always shows GT:0/1.
@@ -142,4 +143,5 @@ gzip -dc ref_phased.vcf.gz | perl -F'\t' -anle '@t=split(/:/,$F[9]);@F[3,4] = @F
 # Requirement : SNPsplit v0.3.2
 SNPsplit --snp_file ref_phased_snpsplit.txt          --bisulfite methylome.bam
 SNPsplit --snp_file ref_phased_snpsplit.txt                      rnaseq.bam
+
 
