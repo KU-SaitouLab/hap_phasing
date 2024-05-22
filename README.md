@@ -1,4 +1,8 @@
 # Haplotye phasing workflow v1.0
+#Used in 
+1. Gyobu-Motani, S. et al. Induction of fetal meiotic oocytes from embryonic stem cells in cynomolgus monkeys.  EMBO J. 42, e112962 (2022) doi: 10.15252/embj.2022112962.
+2. Murase, Y. et al. In vitro reconstitution of epigenetic reprogramming in the human germ line. Nature (2024) doi: 10.1038/s41586-024-07526-6.
+
 ## Step1, 1-4 : Mapping and reconstruct genome reference fasta with target SNP.
 ## Step2, 1-9 : Mapping and haplotype phasing.
 ## Step3, 1-2 : Haplotype phasing other NGS data using SNP.
